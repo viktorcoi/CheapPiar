@@ -1,4 +1,5 @@
 @import "vars";
+@import "animation";
 
 .container {
     width: min(95vw, 1701px);
@@ -93,6 +94,11 @@
     filter: drop-shadow(0 0 13px rgb(206, 241, 255));
 }
 
+.animation(eye, -230px, -190px, 360deg, -360deg);
+.animation(people, 230px, -190px, 360deg, -360deg);
+.animation(heart, 230px, 190px, 360deg, -360deg);
+.animation(bigeye, -0, -290px, -360deg, 360deg);
+.animation(chat, -150px, 270px, -360deg, 360deg);
 
 .numbers {
     background: #0b38706b;
@@ -106,28 +112,33 @@
     }
     &.people {
         z-index: -1;
-        top: 43em;
-        right: 29em;
+        top: 26em;
+        right: 17em;
+        animation: people 20s linear infinite;
     }
     &.eye {
         z-index: -1;
-        top: 14em;
-        right: 34em;
+        top: 26em;
+        right: 17em;
+        animation: eye 15s linear infinite;
     }
     &.big-eye {
         z-index: -2;
-        top: 29em;
-        right: 35em;
+        top: 26em;
+        right: 17em;
+        animation: bigeye 23s linear infinite;
     }
     &.heart {
         z-index: -1;
-        top: 38em;
-        right: 4em;
+        top: 26em;
+        right: 17em;
+        animation: heart 23s linear infinite;
     }
     &.chat {
         z-index: -2;
-        top: 17em;
-        right: -.4em;
+        top: 26em;
+        right: 17em;
+        animation: chat 18s linear infinite;
     }
     img {
         width: 3.5em;
@@ -170,7 +181,7 @@
         margin-top: 4.06em;
         flex-direction: row;
         overflow: hidden;
-        padding: 9.9em 0 8.41em 10.75em;
+        padding: 9.9em 2em 8.41em 10.75em;
         h3 {
             width: 11ch;
             margin-bottom: 1rem;
@@ -248,9 +259,18 @@
 }
 
 .social {
-    width: 49.31em;
-    height: 34.94em;
-    margin-left: 8em;
+    margin-left: 8.5em;
+    > div:nth-child(2) {
+        margin-left: 5.6em;
+    }
+    img {
+        width: 9.45rem;
+        height: 9.45rem;
+        margin: .62rem .54rem;
+        &:hover {
+            filter: drop-shadow(0 0 15px rgba(81, 138, 175, 0.5));
+        }
+    }
 }
 
 .target {
@@ -270,4 +290,13 @@
     height: 60em;
     z-index: -1;
     bottom: -5.3em;
+}
+
+@media screen and (max-width:1789px) {
+    .box-info {
+        min-width: 48%;
+    }
+    .for-mas {
+        margin-top: 3em;
+    }
 }
