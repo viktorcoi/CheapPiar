@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonts/Gilroy-Medium.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonts/Gilroy-Bold.ttf);
+    font-weight: bold;
+}
+
+@import "vars";
+    
+a { 
+    all: unset; 
+    font-size: @48px;
+    &:hover {
+        color: @DarkBlue;
+    }
+}
+
+.between { justify-content: space-between; }
+.d-flex { display: flex; }
+a, button, .cursor-pointer { cursor: pointer; }
+.items-center { align-items: center; }
+.margin-auto { margin: auto; }
+img, .none-select { 
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.pos-relative { position: relative; }
+.pos-absolute { position: absolute; }
+
+.border-circle {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.border-55px {
+    -webkit-border-radius: 3.44em;
+    -moz-border-radius: 3.44em;
+    -ms-border-radius: 3.44em;
+    -o-border-radius: 3.44em;
+    border-radius: 3.44em;
+}
+
+
+a, label, button, .transition_0_3 {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: inherit;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Gilroy';
+    font-weight: normal;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    margin: 0 auto;
+    background:  @BGMain;
+    color: @White;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    border-bottom: 5px solid @LineColor;
+}
+
+footer {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: linear-gradient(298.7deg, #011A37 74.98%, rgba(1, 26, 55, 0) 99.55%);
+}
+
+::-webkit-scrollbar {
+    width: 0.94rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #012445;
+    border-radius: 55px;
+}
+
+p {
+    font-size: @48px;
+}
+
+h2 { 
+    font-size: @100px;
+    font-weight: bold;
+}
+
+h3 { 
+    font-size: @72px;
+    font-weight: bold;
+}
+
+.body-main {
+    background:  @MainGradient;
+}
+
+@media screen and (max-width:1789px) {
+    html {
+        font-size: 14px;
+    }
+}

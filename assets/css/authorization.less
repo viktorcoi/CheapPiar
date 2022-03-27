@@ -1,0 +1,186 @@
+@import "vars";
+
+.container-auth {
+    width: 100vw;
+    height: 100vh;
+    > div {
+        flex-direction: column;
+    }
+}
+
+.auth-logo {
+    width: 20.76em;
+    height: 3.77em;
+    margin-bottom: 1.75em;
+}
+
+.white-form {
+    background: @White;
+    border-radius: 1.87em;
+    overflow: hidden;
+    a {
+        color: @DarkBlue;
+        &:hover {
+            color: @LightBlue;
+        }
+    }
+    form {
+        display: -ms-grid;
+        display: grid;
+    }
+    label {
+        color: @Gray;
+        &:hover {
+            color: @DarkBlue;
+        }
+    }
+    input, a, label, select {
+        font-size: @18px;
+    }
+    input, select {
+        min-width: 23.31rem;
+        border-radius: @Radius14px;
+        border: 1px solid @Gray;
+        padding: .65rem 1.44rem .65rem 3rem;
+        background-position: 0.84rem center;
+        background-repeat: no-repeat;
+        color: @BGMain;
+        &:not(.hidden-check):focus {
+            border: 1px solid @DarkBlue;
+        }
+    }
+    .login {
+        background-image: url(../img/mail.svg);
+        background-size: 1.1rem 0.89rem;
+    }
+    .password {
+        background-image: url(../img/key.svg);
+        background-size: 1.34rem 0.72rem;
+    }
+    .name {
+        min-width: unset;
+        max-width: 10.91rem;
+        background-image: url(../img/name.svg);
+        background-size: 1.11rem;
+    }
+    .hidden-check {
+        all: unset;
+        opacity: 0;
+    }
+    .mark {
+        width: 10.99px;
+        height: 6.99px;
+        opacity: 0;
+    }
+    .check {
+        width: 19px;
+        height: 19px;
+        border: 1px solid @Gray;
+        border-radius: 5px;
+        margin-right: 0.8rem;
+    }
+    .custom-check input:checked ~ .check .mark {
+        opacity: 1;
+    }
+    .custom-check input:checked ~ .check {
+        border: 1px solid @DarkBlue;
+    }
+    button, .btn-end {
+        font-size: @18px;
+        font-weight: bold;
+        color: @White;
+        border: 3px solid @DarkBlue;
+        background: @DarkBlue;
+        border-radius: @Radius14px;
+        padding: .49rem 0;
+        &:hover {
+            background: unset;
+            border: 3px solid @DarkBlue;
+            color: @DarkBlue;
+        } 
+        &:active {
+            border: 3px solid @LightBlue;
+            color: @LightBlue;
+        }
+    }
+    .end-form {
+        background: @LightGray;
+        padding: 1.5em 5.31em 3.13em 5.31em;
+        flex-direction: column;
+        p {
+            font-size: @28px;
+            color: @Gray;
+            margin-bottom: 1.56rem;
+        }
+        a {
+            background: @White;
+            border: 3px solid @Gray;
+            color: @DarkBlue;
+            text-align: center;
+            &:hover {
+                background: @DarkBlue;
+                border: 3px solid @DarkBlue;
+                color: @White;
+            } 
+            &:active {
+                background: @White;
+                border: 3px solid @LightBlue;
+                color: @LightBlue;
+            }
+        }
+    }
+}
+
+.recover-pass, .enter, .create {
+    margin: 2.5em 5.31em 2.75em 5.31em;
+}
+
+.enter {
+    input {
+        margin-bottom: 1.81rem;
+    }
+    a {
+        text-decoration: underline;
+    }
+    label {
+        margin-bottom: 2.81em;
+    }
+}
+
+.recover-pass {
+    input {
+        margin-bottom: 1.19rem;
+    }
+    p {
+        font-size: @24px;
+        color: @BGMain;
+        text-align: center;
+        margin-bottom: 1rem;
+        span {
+            color: @Gray;
+            width: 36ch;
+            font-size: @14px;
+            display: block;
+        }
+    }
+}
+
+.create {
+    input, select {
+        margin-bottom: 1.18rem;
+    }
+    label {
+        margin-right: 0.35rem;
+    }
+    button {
+        margin-top: 1.18rem;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url(../img/watch.svg), url(../img/arrow.svg);
+        background-size: 1.11rem, 0.84rem 0.45rem;
+        background-position: 0.84rem center, right 1.44rem center;
+        color: @Gray;
+    }
+}
