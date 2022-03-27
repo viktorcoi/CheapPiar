@@ -1,0 +1,23 @@
+{
+  "name": "git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktorcoi/CheapPiar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktorcoi/CheapPiar/issues"
+  },
+  "homepage": "https://github.com/viktorcoi/CheapPiar#readme",
+  "dependencies": {
+    "@types/three": "^0.139.0"
+  }
+}
