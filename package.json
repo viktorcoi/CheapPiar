@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/viktorcoi/CheapPiar#readme",
   "dependencies": {
-    "@types/three": "^0.139.0"
+    "@types/three": "^0.139.0",
+    "three-orbitcontrols-ts": "^0.1.2"
   }
 }

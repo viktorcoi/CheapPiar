@@ -1,3 +1,5 @@
+
+
 let 
 
 /**
@@ -14,22 +16,34 @@ renderer,
  */
 scene,
 /**
- * @type {THREE.OrbitControls}
+ * @type {OrbitControls}
  */
 controls;
 
-function init() {
-    renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+let size_w = 600;
+let size_h = 400;
+let aspect_ratio = size_w / size_h;
 
+function initSize() {
+    size_w = container.clientWidth;
+    size_h = container.clientHeight;
+    aspect_ratio = size_w / size_h;
+}
+
+function init() {
+    initSize();
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize(size_w, size_h);
+    renderer
     renderer.setPixelRatio(window.devicePixelRatio);
 
-    document.body.appendChild(renderer.domElement);
+    document.getElementById('container').appendChild(renderer.domElement);
+    /* document.body.appendChild(renderer.domElement); */
 
     scene = new THREE.Scene();
 
 
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+    camera = new THREE.PerspectiveCamera(45, aspect_ratio, 1, 1000);
     camera.position.set(100, 0, 100);
     
 
@@ -72,27 +86,24 @@ function initPoints() {
     
 }
 
-function nestedObjecttoScreenXYZ(obj,camera,width,height)
-{
-	var vector = new THREE.Vector3();
-	vector.setFromMatrixPosition( obj.matrixWorld );
-	var widthHalf = (width/2);
-	var heightHalf = (height/2);
-	vector.project(camera);
-	vector.x = ( vector.x * widthHalf ) + widthHalf;
-	vector.y = - ( vector.y * heightHalf ) + heightHalf;
-	return vector;
-};
-
 let axis = 0.001;
 /**
  * @type {HTMLElement}
  */
 let h1 = null;
+
+/**
+ * @type {HTMLElement}
+ */
+let container = null;
 function animate() {
     controls.autoRotate = true;
     controls.update();
     controls.autoRotateSpeed = 0.5;
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.004;
     requestAnimationFrame(animate);
     
     renderer.render(scene, camera);
@@ -109,31 +120,42 @@ function animate() {
 
     vector.x = Math.round( (   vector.x + 1 ) * canvas.width  / 2 ),
     vector.y = Math.round( ( - vector.y + 1 ) * canvas.height / 2 );
-
+    
     if (h1) {
-        h1.style.left = `${vector.x - h1.clientWidth / 2}px`;
-        h1.style.top = `${vector.y - h1.clientHeight / 2}px`;
-        h1.innerHTML = (camera.position.z + 90).toString();
+        const x = vector.x - h1.clientWidth / 2;
+        const y = vector.y - h1.clientHeight / 2;
+        
+        /* h1.style.left = `${(x / window.innerWidth) * 100}%`;
+        h1.style.top = `${(y / window.innerHeight) * 100}%`; */
+       /*  h1.innerHTML = (camera.position.z).toString(); */
+       debugger;
+       /* console.log(controls); */
+        /* h1.innerHTML = (controls.sphericalDelta.phi).toString(); */
     }
     /* console.log(vector) */
 }
 
 function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    initSize();
+    camera.aspect = aspect_ratio;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(size_w, size_h);
 }
 
 document.onreadystatechange = (async () => {
-    setTimeout(() => {
-          
-    }, 0);
-    h1 = document.getElementById("test");
+    if (document.readyState == "complete") {
+        h1 = document.getElementById("test");
+        container = document.getElementById("container");
+        setTimeout(() => {
+            init();
+            initPoints();
+            animate(); 
+        }, 0);
+        
+    }
 });
 
 
 window.addEventListener('resize', onWindowResize);
 console.log("test");
-init();
-initPoints();
-animate(); 
+

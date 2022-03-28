@@ -10,7 +10,6 @@
     
 </head>
 <body>
-    <h1 class="test" id="test">ЛОХ</h1>
     <style>
         body {
             /* prevent white margin */
@@ -25,6 +24,16 @@
             padding: unset;
             color: white;
             position: absolute;
+            background: black;
+        }
+        
+        .container {
+            width: max(41.97em , 230px);
+            height: max(47.1em, 253px);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
         }
     </style>
     <script src="three.js"></script>
@@ -32,5 +41,8 @@
     <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
     <script src="three-projector.js"></script>
     <script src="test.js"></script>
+    <div class="container" id="container">
+        <h1 class="test" id="test">ЛОХ</h1>
+    </div>
 </body>
 </html>
