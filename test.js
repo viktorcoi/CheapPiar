@@ -57,7 +57,7 @@ function initPoints() {
 
     /* var positions = []; */
 
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < 10; i++) {
         const geometry = new THREE.BufferGeometry();
         var positions = [];
         var vertex = randomPointInSphere(50);
@@ -113,6 +113,7 @@ function animate() {
     if (h1) {
         h1.style.left = `${vector.x - h1.clientWidth / 2}px`;
         h1.style.top = `${vector.y - h1.clientHeight / 2}px`;
+        h1.innerHTML = (camera.position.z + 90).toString();
     }
     /* console.log(vector) */
 }
