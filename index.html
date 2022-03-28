@@ -19,18 +19,29 @@
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/main_page.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 <body class="body-main">
     <header>
         <div class="header d-flex items-center between margin-auto">
             <a href="./index.html"><img class="logo-header" src="./assets/img/logo.svg" alt="CheapPiar"></a>
-            <div class="elements-header d-flex items-center">
+            <div class="d-flex items-center">
+                <a class="header-lc" href="./authorization.html"><img src="./assets/img/lc.svg" alt="Войти"></a>
+                <div class="between burger">
+                    <div class="border-55px"></div>
+                    <div class="border-55px"></div>
+                    <div class="transition_0_3 border-55px"></div>
+                </div>
+            </div>
+            
+            <div class="elements-header d-flex items-center transition_0_3">
                 <nav>
                     <a href="#">API</a>
                     <a href="#">Услуги</a>
-                    <a href="./authorization.html">Войти</a>
+                    <a class="enter-main" href="./authorization.html">Войти</a>
                 </nav>
-                <a class="language-header d-flex items-center cursor-pointer" href="">
+                <a class="language-header d-flex items-center cursor-pointer" href="./index_en.html">
                     <img src="./assets/img/ru.svg" alt="Русский язык">
                     RU
                 </a>
@@ -55,7 +66,12 @@
                         </div>
                     </div>
                     <div class="pos-relative for-mas">
-                        <img class="mas pos-absolute" src="./assets/img/mas.png" alt="Максотик">
+                        <div class="pos-absolute mascot">
+                            <img class="mas pos-absolute" src="./assets/img/mas.png" alt="Максотик">
+                            <img class="form-eye pos-absolute" src="./assets/img/feye.png" alt="Форма для глаз">
+                            <img class="glow-eye pos-absolute" src="./assets/img/mglow.svg" alt="Свечение глаз">
+                            <img class="mas-eye pos-absolute" src="./assets/img/meye.svg" alt="">
+                        </div>
                         <div class="numbers people pos-absolute d-flex items-center border-55px">
                             <p>+2605</p>
                             <img src="./assets/img/people.svg" alt="Людей">
@@ -116,7 +132,7 @@
                 </div>
                 <div class="box-info list-services d-flex border-55px between items-center">
                     <div class="items-center d-flex">
-                        <h3>Широкий спектр услуг</h3>
+                        <h3>Широкий<br>спектр услуг</h3>
                         <p>Мы стараемся предоставить широкий выбор услуг <br>и соцсетей для продвижения</p>
                     </div>
                     <div class="social">
@@ -163,8 +179,9 @@
             <nav>
                 <a href="./authorization.html">Войти</a>
                 <a href="./registration.html">Регистрация</a>
+                <a class="footer-lc" href="./authorization.html"><img src="./assets/img/lc.svg" alt="Войти"></a>
             </nav>
-            <a class="language-footer d-flex items-center cursor-pointer" href="">
+            <a class="language-footer d-flex items-center cursor-pointer" href="./index_en.html">
                 <img src="./assets/img/ru.svg" alt="Русский язык">
                 RU
             </a>

@@ -1,22 +1,24 @@
 @import "vars";
 
 .container-auth {
-    width: 100vw;
+    width: 94vw;
     height: 100vh;
     > div {
         flex-direction: column;
+        > a {
+            margin-bottom: 28px;
+        }
     }
 }
 
 .auth-logo {
-    width: 20.76em;
-    height: 3.77em;
-    margin-bottom: 1.75em;
+    width: 332.16px;
+    height: 60.32px;
 }
 
 .white-form {
     background: @White;
-    border-radius: 1.87em;
+    border-radius: 29px;
     overflow: hidden;
     a {
         color: @DarkBlue;
@@ -38,11 +40,11 @@
         font-size: @18px;
     }
     input, select {
-        min-width: 23.31rem;
+        min-width: 372px;
         border-radius: @Radius14px;
         border: 1px solid @Gray;
-        padding: .65rem 1.44rem .65rem 3rem;
-        background-position: 0.84rem center;
+        padding: 10px 23px 10px 48px;
+        background-position: 13.44px center;
         background-repeat: no-repeat;
         color: @BGMain;
         &:not(.hidden-check):focus {
@@ -51,17 +53,17 @@
     }
     .login {
         background-image: url(../img/mail.svg);
-        background-size: 1.1rem 0.89rem;
+        background-size: 17.6px 14.24px;
     }
     .password {
         background-image: url(../img/key.svg);
-        background-size: 1.34rem 0.72rem;
+        background-size: 21.44px 11.52px;
     }
     .name {
         min-width: unset;
-        max-width: 10.91rem;
+        max-width: 174px;
         background-image: url(../img/name.svg);
-        background-size: 1.11rem;
+        background-size: 17.8px;
     }
     .hidden-check {
         all: unset;
@@ -77,7 +79,7 @@
         height: 19px;
         border: 1px solid @Gray;
         border-radius: 5px;
-        margin-right: 0.8rem;
+        margin-right: 12.8px;
     }
     .custom-check input:checked ~ .check .mark {
         opacity: 1;
@@ -92,7 +94,7 @@
         border: 3px solid @DarkBlue;
         background: @DarkBlue;
         border-radius: @Radius14px;
-        padding: .49rem 0;
+        padding: 8px 0;
         &:hover {
             background: unset;
             border: 3px solid @DarkBlue;
@@ -105,12 +107,12 @@
     }
     .end-form {
         background: @LightGray;
-        padding: 1.5em 5.31em 3.13em 5.31em;
+        padding: 24px 85px 50px 85px;
         flex-direction: column;
         p {
             font-size: @28px;
             color: @Gray;
-            margin-bottom: 1.56rem;
+            margin-bottom: 25px;
         }
         a {
             background: @White;
@@ -132,30 +134,30 @@
 }
 
 .recover-pass, .enter, .create {
-    margin: 2.5em 5.31em 2.75em 5.31em;
+    margin: 40px 85px 44px 85px;
 }
 
 .enter {
     input {
-        margin-bottom: 1.81rem;
+        margin-bottom: 29px;
     }
     a {
         text-decoration: underline;
     }
-    label {
-        margin-bottom: 2.81em;
+    .for-check {
+        margin-bottom: 45px;
     }
 }
 
 .recover-pass {
     input {
-        margin-bottom: 1.19rem;
+        margin-bottom: 19px;
     }
     p {
         font-size: @24px;
         color: @BGMain;
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
         span {
             color: @Gray;
             width: 36ch;
@@ -167,20 +169,89 @@
 
 .create {
     input, select {
-        margin-bottom: 1.18rem;
+        margin-bottom: 19px;
     }
     label {
-        margin-right: 0.35rem;
+        margin-right: 5.5px;
     }
     button {
-        margin-top: 1.18rem;
+        margin-top: 19px;
     }
     select {
         -webkit-appearance: none;
         -moz-appearance: none;
         background-image: url(../img/watch.svg), url(../img/arrow.svg);
-        background-size: 1.11rem, 0.84rem 0.45rem;
-        background-position: 0.84rem center, right 1.44rem center;
+        background-size: 17.76px, 13.44px 7.2px;
+        background-position: 13.44px center, right 23px center;
         color: @Gray;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .recover-pass, .enter, .create {
+        margin: 6.67em 14.16em 7.33em 14.16em;
+    }
+    .white-form .end-form {
+        padding: 4em 14.16em 8.33em 14.16em;
+    }
+    .white-form input, .white-form select {
+        min-width: 320px;
+    }
+    .create > div:first-child {
+        flex-direction: column;
+        input {
+            max-width: 331px;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .white-form {
+        margin-bottom: 20px;
+    }
+    .white-form input, .white-form select, .create > div:first-child input {
+        min-width: 100%;
+    }
+    .auth-logo {
+        width: 282.16px;
+        height: 50.32px;
+    }
+
+    .enter input {
+        margin-bottom: 15px;
+    }
+
+    .white-form input, .white-form a, .white-form label, .white-form select {
+        font-size: 12px;
+    }
+
+    .white-form .end-form p {
+        font-size: 18px;
+    }
+    
+    .white-form button, .white-form .btn-end {
+        font-size: 12px;
+    }
+
+    .for-check {
+        align-items: flex-end;
+    }
+
+    .enter .for-check {
+        margin-bottom: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        label {
+            margin-bottom: 10px;
+        }
+    }
+
+    label {
+        align-items: flex-end;
+    }
+
+    .recover-pass p span {
+        margin-top: 10px;
+        width: 100%;
     }
 }

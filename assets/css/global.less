@@ -42,11 +42,11 @@ img, .none-select {
 }
 
 .border-55px {
-    -webkit-border-radius: 3.44em;
-    -moz-border-radius: 3.44em;
-    -ms-border-radius: 3.44em;
-    -o-border-radius: 3.44em;
-    border-radius: 3.44em;
+    -webkit-border-radius: max(3.44em, 40px);
+    -moz-border-radius: max(3.44em, 40px);
+    -ms-border-radius: max(3.44em, 40px);
+    -o-border-radius: max(3.44em, 40px);
+    border-radius: max(3.44em, 15px);
 }
 
 
@@ -101,7 +101,7 @@ footer {
 }
 
 ::-webkit-scrollbar {
-    width: 0.94rem;
+    width: max(0.94rem, 9px);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -142,5 +142,41 @@ h3 {
 @media screen and (max-width:1324px) {
     html {
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width:1120px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width:780px) {
+    html {
+        font-size: 6px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 5px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 4px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    html {
+        font-size: 3px;
     }
 }
