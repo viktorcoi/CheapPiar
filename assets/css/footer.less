@@ -1,8 +1,8 @@
 @import "vars";
 
 .footer {
-    width: min(95vw, 1701px);
-    padding: 1.69em 10px;
+    width: min(94vw, 1681px);
+    padding: max(1.69em, 20px) 0;
     > a {
         font-size: unset;
     }
@@ -19,13 +19,57 @@
         line-height: 98%;
         img {
             margin-right: .1rem;
-            width: 2.3rem;
-            height: 1.57rem;
+            width: max(2.3rem, 33px);
+            height: max(1.57rem, 18px);
+        }
+    }
+    .footer-lc {
+        display: none;
+        img {
+            width: 22.21px;
+            height: 24.5px;
+            &:hover {
+                filter: invert(43%) sepia(29%) saturate(5494%) hue-rotate(172deg) brightness(102%) contrast(101%);
+            }
         }
     }
 }
 
 .logo-footer {
-    width: 20.75rem;
-    height: 3.75rem;
+    width: max(20.75rem, 149.85px);
+    height: max(3.75rem, 27.21px);
+}
+
+@media screen and (max-width:1000px) {
+    .footer {
+        nav {
+            margin-right: 6em;
+        }
+    }
+}
+
+@media screen and (max-width:780px) {
+    .footer {
+        nav {
+            margin-right: unset;
+        }
+    }
+}
+
+@media screen and (max-width:615px) {
+    .footer {
+        nav a {
+            display: none;
+        }
+        .footer-lc {
+            display: flex;
+            margin-left: 45px;
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .footer .footer-lc {
+        margin-left: 45px;
+    }
 }

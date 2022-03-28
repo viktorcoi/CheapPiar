@@ -1,9 +1,9 @@
 @import "vars";
 @import "animation";
+@import "adaptive_mas";
 
 .container {
-    width: min(95vw, 1701px);
-    padding: 0 10px;
+    width: min(94vw, 1681px);
 }
 
 .info-site {
@@ -14,7 +14,7 @@
         color: @Gray;
         span {
             display: block;
-            font-size: 90px;
+            font-size: @90px;
             font-weight: bold;
             line-height: 100%;
             margin-bottom: 1rem;
@@ -45,30 +45,30 @@
         z-index: -4;
         top: 2em;
         right: 5.2em;
-        width: 41.97em;
-        height: 47.10em;
+        width: max(41.97em, 229.58px);
+        height: max(47.10em, 252.89px);
         -webkit-backdrop-filter: blur(1px);
         backdrop-filter: blur(1px);
-        filter: drop-shadow(0 0 100px #009fe3ce);
+        filter: drop-shadow(0 0 6.25em #009fe3ce);
     }
     .form-eye {
         z-index: -3;
-        width: 38.81em;
-        height: 23.69em;
+        width: max(38.81em, 203.63px);
+        height: max(23.69em, 134,91px);
         top: 16em;
         right: 6.7em;
     }
     .glow-eye {
         z-index: -2;
-        width: 24.81em;
-        height: 11.69em;
+        width: max(24.81em, 128.67px);
+        height: max(11.69em, 69.04px);
         top: 19em;
         right: 13.7em;
     }
     .mas-eye {
         z-index: -1;
-        width: 24.81em;
-        height: 9.69em;
+        width: max(24.81em, 127.8px);
+        height: max(9.69em, 59.07px);
         top: 20em;
         right: 13.7em;
     }
@@ -76,7 +76,7 @@
 
 .btn-service {
     background: @DarkBlue;
-    padding: 1.625rem 9.256rem;
+    padding: max(1.625rem, 10px) max(9.256rem, 52px);
     box-shadow: @BoxShadowInset;
     outline: 6px solid transparent;
     &:hover {
@@ -91,14 +91,14 @@
 }
 
 .btn-enter {
-    margin-left: 1rem;
+    margin-left: max(1rem, 12px);
     outline: 6px solid @DarkBlue;
-    padding: 1.625rem 3.55rem;
+    padding: max(1.625rem, 10px) max(3.55rem, 20px);
     box-shadow: @BoxShadowBlue;
     img {
-        width: 1.39rem;
-        height: 2.13rem;
-        margin-left: 1rem;
+        width: max(1.39rem, 6.95px);
+        height: max(2.13rem, 10.64px);
+        margin-left: max(1rem, 7px);
     }
     &:hover {
         background: @DarkBlue;
@@ -114,14 +114,14 @@
 
 .line {
     margin: 12.19em auto;
-    width: 1595px;
-    height: 0.94rem;
+    width: min(87vw, 1595px);
+    height: max(0.94rem, 9px);
     background: @LineColor;
     filter: drop-shadow(0 0 13px rgb(206, 241, 255));
 }
 
 .animation(eye, -14.38em, -11.88em, 360deg, -360deg);
-.animation(people, 14.38em, -11.88em, 360deg, -360deg);
+.animation(people, 14.38em, -11.88em,  360deg, -360deg);
 .animation(heart, 14.38em, 11.88em, 360deg, -360deg);
 .animation(bigeye, -0, -18.13em, -360deg, 360deg);
 .animation(chat, -9.38em, 13.13em, -360deg, 360deg);
@@ -132,43 +132,35 @@
     backdrop-filter: blur(4px);
     box-shadow: 0 0px 15px 0px rgb(255 255 255 / .4) inset;
     padding: 1.03em 1.9em;
+    top: 26em;
+    right: 17em;
     p {
         text-shadow: 0px 0px 30px rgba(85, 172, 241, 1);
         font-weight: bold;
     }
     &.people {
         z-index: -1;
-        top: 26em;
-        right: 17em;
         animation: people 20s linear infinite;
     }
     &.eye {
         z-index: -1;
-        top: 26em;
-        right: 17em;
         animation: eye 15s linear infinite;
     }
     &.big-eye {
         z-index: -2;
-        top: 26em;
-        right: 17em;
         animation: bigeye 23s linear infinite;
     }
     &.heart {
         z-index: -1;
-        top: 26em;
-        right: 17em;
         animation: heart 23s linear infinite;
     }
     &.chat {
         z-index: -2;
-        top: 26em;
-        right: 17em;
         animation: chat 18s linear infinite;
     }
     img {
-        width: 3.5em;
-        height: 3.6em;
+        width: max(3.5em, 17.5px);
+        height: max(3.6em, 18px);
     }
 }
 
@@ -209,7 +201,7 @@
         overflow: hidden;
         padding: 9.9em 2em 8.41em 10.75em;
         h3 {
-            width: 11ch;
+            width: 14ch;
             margin-bottom: 1rem;
         }
         p {
@@ -322,7 +314,114 @@
     .box-info {
         min-width: 48%;
     }
-    .for-mas {
-        margin-top: 3em;
+}
+
+@media screen and (max-width:1120px) {
+    .info-site a {
+        outline-offset: -3px;
     }
+    .btn-service {
+        outline: 3px solid transparent;
+        &:hover {
+            outline: 3px solid @DarkBlue;
+        } 
+        &:active {
+            outline: 3px solid @White;
+        }
+    }
+    .btn-enter {
+        outline: 3px solid @DarkBlue;
+        &:hover {
+            outline: 3px solid transparent;
+        } 
+        &:active {
+            outline: 3px solid @White;
+        }
+    }
+}
+
+@media screen and (max-width:675px) {
+    .info-site {
+        > div:first-child {
+            flex-direction: column;
+        }
+        h1 {
+            margin-bottom: 20em;
+            width: 100%;
+        }
+    }
+    .mascot {
+        width: 100%;
+        margin-left: 5em;
+        .mas {
+            left: 0; right: 0;
+            margin: auto;
+        }
+        .form-eye {
+            left: 0; right: 0;
+            margin: auto;
+        }
+        .glow-eye {
+            left: 0; right: 0;
+            margin: auto;
+        }
+        .mas-eye {
+            left: 0; right: 0;
+            margin: auto;
+        }
+    }
+    .numbers {
+        max-width: 15.45em;
+        left: 0; right: 0;
+        margin: auto;
+    }
+
+    .mas_move(-61em, -46em, -43em, -42em, -38em);
+
+    .about-cheappiar {
+        .list-services {
+            padding: 7em 2em 6em 7em;
+        }
+        .social {
+            margin-left: 2.5em;
+        }
+    }
+    .target {
+        margin-bottom: 23.13em;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .mas_move(-63em, -48em, -45em, -44em, -40em);
+    .numbers {
+        min-width: 77px;
+        height: 29px;
+    }
+    .animation(eye, -86.28px, -71.28px, 360deg, -360deg);
+    .animation(people, 86.28px,-71.28px,  360deg, -360deg);
+    .animation(heart, 86.28px, 11.88em, 360deg, -360deg);
+    .animation(bigeye, -0, -108.78px, -360deg, 360deg);
+    .animation(chat, -56.28px, 79.78px, -360deg, 360deg);
+}
+
+@media screen and (max-width:500px) {
+    .about-cheappiar .list-services p {
+        font-size: 10px;
+    }
+    .mas_move(-79em, -60em, -56em, -55em, -47em);
+}
+
+@media screen and (max-width:410px) {
+    .target {
+        h2 {
+           font-size: 22px;
+        }
+        p {
+            width: 95%;
+        }
+    }
+    .box-info p {
+        font-size: 10px;
+    }
+    .mas_move(-105em, -79em, -74em, -72em, -63em);
 }
