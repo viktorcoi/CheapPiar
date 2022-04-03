@@ -7,18 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/main_page.css">
 </head>
-<body>
+<body class="body-main">
     <style>
-        body {
-            /* prevent white margin */
-            margin: 0;
-            
-            
-            overflow: hidden;
-            position: relative;
-        }
+       
         .test {
             margin: unset;
             padding: unset;
@@ -27,7 +23,7 @@
             background: black;
         }
         
-        .container {
+        .container-a {
             width: max(41.97em , 230px);
             height: max(47.1em, 253px);
             margin: 0 auto;
@@ -35,14 +31,140 @@
             justify-content: center;
             position: relative;
         }
+
+        .container-a {
+            /* position: absolute; */
+            margin-top: 2em;
+            margin-left: -6em;
+        }
     </style>
-    <script src="three.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.139.2/build/three.module.js",
+            "three-css2drenderer": "./three-css2drenderer.js",
+            "three-css3drenderer": "./three-css3drenderer.js",
+            "orbit-controls": "./three-OrbitControls.js"
+          }
+        }
+      </script>
+    <script src="three.js" type="module"></script>
+    <script src="three-OrbitControls.js" type="module"></script>
+   
+    <script src="three-css2drenderer.js" type="module"></script>
+    <script src="test.js" type="module"></script>
     
-    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
-    <script src="three-projector.js"></script>
-    <script src="test.js"></script>
-    <div class="container" id="container">
-        <h1 class="test" id="test">ЛОХ</h1>
-    </div>
+    <main>
+        <div class="container margin-auto">
+            <section class="info-site">
+                <div class="d-flex between">
+                    <div>
+                        <h1>
+                            <span><span>Накрутка </span>нового поколения</span>
+                            накрутка соц сетей прямиком от производителя
+                        </h1>
+                        <div>
+                            <a class="btn-service border-55px" href="">Сервисы</a>
+                            <a class="btn-enter border-55px items-center" href="./authorization.html">
+                                Войти
+                                <img src="./assets/img/triangle.svg" alt="Войти">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pos-relative for-mas">
+                        <div class="mascot" style="margin-top: 6em">
+                            <!-- <img class="mas" style="margin-right:unset; margin-left: -3em;" src="./assets/img/mas.png" alt="Максотик">
+                             -->
+                            <div class="mas" id="container">
+
+                            </div>
+                            
+<!--                                 <img class="form-eye pos-absolute" src="./assets/img/feye.png" alt="Форма для глаз">
+                                <img class="mas-eye pos-absolute" src="./assets/img/meye.svg" alt="">
+                                <h1 class="test" id="test">ЛОХ</h1>
+                                <h1 class="test" id="test2">ЛОХ</h1>
+ -->                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="line margin-auto border-55px"></div>
+            </section>
+            <section class="about-cheappiar">
+                <div class="d-flex">
+                    <h2 class="margin-auto">CheapPiar - это</h2>
+                </div>
+                <div class="box-info services border-55px d-flex items-center pos-relative">
+                    <img class="img-home" src="./assets/img/home.svg" alt="Из дома">
+                    <h3>Услуги от поставщика</h3>
+                    <p>
+                        Все услуги выполняются собственными 
+                        силами, поэтому вы можете получить 
+                        самую низкую цену
+                    </p>
+                    <img class="wreath-left pos-absolute" src="./assets/img/wreath-left.svg" alt="Венок">
+                    <img class="wreath-right pos-absolute" src="./assets/img/wreath-right.svg" alt="Венок">
+                </div>
+                <div class="d-flex between">
+                    <div class="box-info guarant border-55px d-flex items-center">
+                        <h3>Гарантия на возврат</h3>
+                        <div class="for-refund">
+                            <div class="refund d-flex items-center between">
+                                <p class="d-flex items-center"><img class="plus" src="./assets/img/plus.svg" alt="">Возврат</p>
+                                <p>+ 867$</p>
+                            </div>
+                            <div class="refund d-flex items-center between">
+                                <p class="d-flex items-center"><img class="plus" src="./assets/img/plus.svg" alt="">Возврат</p>
+                                <p>+ 164$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-info price border-55px d-flex items-center">
+                        <img class="dollar" src="./assets/img/dollar.svg" alt="Хорошие цены">
+                        <h3>Действительно низкие цены</h3>
+                    </div>
+                </div>
+                <div class="box-info list-services d-flex border-55px between items-center">
+                    <div class="items-center d-flex">
+                        <h3>Широкий<br>спектр услуг</h3>
+                        <p>Мы стараемся предоставить широкий выбор услуг <br>и соцсетей для продвижения</p>
+                    </div>
+                    <div class="social">
+                        <div class="d-flex">
+                            <a class="d-flex" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/tt.png" alt="TikTok"></a>
+                            <a class="d-flex" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/yt.png" alt="YouTube"></a>
+                            <a class="d-flex" href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/twitch.png" alt="Twitch"></a>
+                            <a class="d-flex" href="https://www.snapchat.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/snapchat.png" alt="Snapchat"></a>
+                        </div>
+                        <div class="d-flex">
+                            <a class="d-flex" href="https://telegram.org/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/telegram.png" alt="Telegram"></a>
+                            <a class="d-flex" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/inst.png" alt="Instagram"></a>
+                            <a class="d-flex" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/in.png" alt="In"></a>
+                            <a class="d-flex" href="https://www.spotify.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/spotify.png" alt="Spotify"></a>
+                        </div>
+                        <div class="d-flex">
+                            <a class="d-flex" href="https://www.google.ru/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/google.png" alt="Google"></a>
+                            <a class="d-flex" href="https://vk.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/vk.png" alt="VK"></a>
+                            <a class="d-flex" href="https://tinder.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/tinder.png" alt="Tinder"></a>
+                            <a class="d-flex" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer nofollow"><img class="transition_0_3" src="./assets/img/fb.png" alt="Facebook"></a>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="line margin-auto border-55px"></div>
+            </section>
+            <section class="target">
+                <div class="d-flex items-center">
+                    <h2>ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
+                    <p>Мы предоставляем услуги по продвижению в интернете. У нас вы можете приобрести
+                        просмотры, лайки, подписчиков <br>и многие другие услуги по невероятно 
+                        низким ценам.</p>
+                </div>
+            </section>
+        </div>
+        <div class="pos-relative">
+            <img class="pos-absolute mas-2" src="./assets/img/mas_2.png" alt="Наш котик - маскотик">
+        </div>
+    </main>
 </body>
 </html>

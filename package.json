@@ -20,5 +20,8 @@
   "dependencies": {
     "@types/three": "^0.139.0",
     "three-orbitcontrols-ts": "^0.1.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
   }
 }

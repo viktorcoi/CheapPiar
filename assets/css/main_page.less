@@ -39,14 +39,18 @@
 
 .mascot {
     transform: rotate(-5deg);
-    z-index: -1;
+    /* z-index: -1; */
     .mas {
         margin-top: 4em;
         margin-right: 3em;
-        z-index: -4;
+        /* z-index: -4; */
         width: max(41.97em, 229.58px);
         height: max(47.10em, 252.89px);
         filter: drop-shadow(0 0 6.25em #009fe3ce);
+        user-select: none;
+    }
+    & > div {
+        user-select: none;
     }
     .form-eye {
         z-index: -2;
@@ -56,11 +60,11 @@
         right: 4.7em;
     }
     .mas-eye {
-        z-index: -1;
+        /* z-index: -1; */
         width: max(32.81em, 179.8px);
         height: max(46.69em, 254.07px);
-        top: max(4em, 23px);
-        right: 8em;
+        /* top: max(4em, 23px);
+        right: 8em; */
         filter: drop-shadow(0 0 1.25em #009fe3ce);
     }
 }
@@ -123,31 +127,45 @@
     backdrop-filter: blur(4px);
     box-shadow: 0 0px 15px 0px rgb(255 255 255 / .4) inset;
     padding: 1.03em 1.9em;
-    top: max(26em, 146px);
-    right: 17em;
+    user-select: none;
+    transform: rotate(5deg);
+    transition: 5s transform linear, .5s opacity linear, .5s filter linear;
+    opacity: 1;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    /* top: max(26em, 146px); */
+    /* right: 17em; */
+
+    &.blur {
+        /* transform: scale(0.8, 0.8) rotate(5deg); */
+        filter: blur(3px);
+        opacity: 0.5
+    }
+
     p {
         text-shadow: 0px 0px 30px rgba(85, 172, 241, 1);
         font-weight: bold;
     }
     &.people {
-        z-index: -1;
-        animation: people 20s linear infinite;
+        /* z-index: -1; */
+        /* animation: people 20s linear infinite; */
     }
     &.eye {
-        z-index: -1;
-        animation: eye 15s linear infinite;
+        /* z-index: -1; */
+        /* animation: eye 15s linear infinite; */
     }
     &.big-eye {
-        z-index: -2;
-        animation: bigeye 23s linear infinite;
+       /*  z-index: -2; */
+        /* animation: bigeye 23s linear infinite; */
     }
     &.heart {
-        z-index: -1;
-        animation: heart 23s linear infinite;
+        /* z-index: -1; */
+        /* animation: heart 23s linear infinite; */
     }
     &.chat {
-        z-index: -2;
-        animation: chat 18s linear infinite;
+        /* z-index: -2; */
+        /* animation: chat 18s linear infinite; */
     }
     img {
         width: max(3.5em, 17.5px);
@@ -298,7 +316,7 @@
 .mas-2 {
     width: 48.69em;
     height: 60em;
-    z-index: -1;
+    /* z-index: -1; */
     bottom: -5.3em;
 }
 
@@ -363,7 +381,7 @@
     }
     .numbers {
         max-width: 15.45em;
-        left: 0; right: 0;
+        /* left: 0; right: 0; */
         margin: auto;
     }
 
