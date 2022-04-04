@@ -30,6 +30,12 @@
 .info-site .line {
   margin: 12.19em auto 5em auto;
 }
+.mas.no-scale {
+  filter: drop-shadow(0 0 6.25em #009fe3ce);
+}
+#container {
+  transform: scale(0.8);
+}
 .mascot {
   transform: rotate(-5deg);
   /* z-index: -1; */
@@ -40,26 +46,52 @@
   /* z-index: -4; */
   width: max(41.97em, 229.58px);
   height: max(47.1em, 252.89px);
-  filter: drop-shadow(0 0 6.25em #009fe3ce);
+  /* filter: drop-shadow(0 0 6.25em #009fe3ce); */
   user-select: none;
 }
 .mascot > div {
   user-select: none;
 }
 .mascot .form-eye {
-  z-index: -2;
+  /* z-index: -2; */
   width: max(38.81em, 209.63px);
   height: max(23.69em, 122.91px);
-  top: max(18em, 102px);
-  right: 4.7em;
+  /* top: max(18em, 102px);
+        right: 4.7em; */
 }
 .mascot .mas-eye {
   /* z-index: -1; */
   width: max(32.81em, 179.8px);
   height: max(46.69em, 254.07px);
+  animation: blink 5s infinite ease-in-out;
   /* top: max(4em, 23px);
         right: 8em; */
-  filter: drop-shadow(0 0 1.25em #009fe3ce);
+}
+.mascot .mas-eye-filter {
+  filter: drop-shadow(0 0 20px #009fe3ce);
+  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1) */
+}
+@keyframes blink {
+  20%,
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  0% {
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  7% {
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    clip-path: polygon(0 63%, 100% 63%, 100% 100%, 0 100%);
+  }
+  8% {
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  15% {
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    clip-path: polygon(0 63%, 100% 63%, 100% 100%, 0 100%);
+  }
 }
 .btn-service {
   background: #009fe3;
@@ -146,17 +178,18 @@
 }
 .numbers {
   background: #0b38706b;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  /* -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px); */
   box-shadow: 0 0px 15px 0px rgba(255, 255, 255, 0.4) inset;
   padding: 1.03em 1.9em;
   user-select: none;
   transform: rotate(5deg);
-  transition: 5s transform linear, 0.5s opacity linear, 0.5s filter linear;
+  /* transition: 5s transform linear, .5s opacity linear, .5s filter linear; */
+  transition: 0.5s filter linear, 0.5s opacity linear;
   opacity: 1;
-  -webkit-font-smoothing: subpixel-antialiased;
-  transform: translateZ(0);
-  backface-visibility: hidden;
+  /* -webkit-font-smoothing: subpixel-antialiased;
+    transform: translateZ(0);
+    backface-visibility: hidden; */
   /* top: max(26em, 146px); */
   /* right: 17em; */
 }
@@ -166,7 +199,7 @@
   opacity: 0.5;
 }
 .numbers p {
-  text-shadow: 0px 0px 30px #55acf1;
+  /* text-shadow: 0px 0px 30px rgba(85, 172, 241, 1); */
   font-weight: bold;
 }
 .numbers.people {
@@ -365,9 +398,9 @@
     margin: 21px auto 0 auto;
   }
   .mascot .form-eye {
-    left: 0;
-    right: 0;
-    margin: auto;
+    /* left: 0; right: 0;
+            margin: auto; */
+    margin-left: 4em;
   }
   .mascot .glow-eye {
     left: 0;

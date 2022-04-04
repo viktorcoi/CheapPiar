@@ -82,6 +82,8 @@ class CSS2DRenderer {
 
 		};
 
+		this.isApple = /apple/i.test( navigator.vendor );
+
 		this.render = function ( scene, camera ) {
 
 			if ( scene.autoUpdate === true ) scene.updateMatrixWorld();
@@ -124,7 +126,7 @@ class CSS2DRenderer {
 
 					const element = object.element;
 
-					if ( /apple/i.test( navigator.vendor ) ) {
+					if ( _this.isApple ) {
 
 						// https://github.com/mrdoob/three.js/issues/21415
 						element.style.transform = 'translate(-50%,-50%) translate(' + Math.round( _vector.x * _widthHalf + _widthHalf ) + 'px,' + Math.round( - _vector.y * _heightHalf + _heightHalf ) + 'px)';
