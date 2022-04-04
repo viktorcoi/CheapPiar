@@ -75,22 +75,27 @@
   20%,
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    filter: blur(0px);
   }
   0% {
     transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    filter: blur(0px);
   }
   7% {
     transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
     clip-path: polygon(0 63%, 100% 63%, 100% 100%, 0 100%);
+    filter: blur(10px);
   }
   8% {
     transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    filter: blur(0px);
   }
   15% {
     transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
     clip-path: polygon(0 63%, 100% 63%, 100% 100%, 0 100%);
+    filter: blur(10px);
   }
 }
 .btn-service {
