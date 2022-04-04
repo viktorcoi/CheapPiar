@@ -15,7 +15,7 @@ a {
 a:hover {
   color: #009fe3;
 }
-img {
+.mas img {
   user-select: none;
   touch-action: none;
   pointer-events: none;

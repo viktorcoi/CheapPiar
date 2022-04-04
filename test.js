@@ -348,6 +348,10 @@ function animate(timestamp) {
 
 function onWindowResize() {
     try {
+        if(window.matchMedia("(any-hover: none)").matches) {
+            mouse_x = 0.8;
+            mouse_y = 0.7;
+        }
         initSize();
         camera.aspect = aspect_ratio;
         camera.updateProjectionMatrix();

@@ -6,38 +6,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="Накрутка подписчиков, лайков, просмотров и многого другого.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CheapPiar">
+    <meta name="twitter:description" content="Накрутка подписчиков, лайков, просмотров и многого другого.">
+    <meta name="twitter:image" content="">
+    <link rel="canonical" href="index.html">
+    <link rel="icon" href="./assets/img/ico.svg">
+    <meta name="description" content="Накрутка подписчиков, лайков, просмотров и многого другого.">
+    <link rel="canonical" href="./index.html">
+    <title>CheapPiar</title>
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/main_page.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 <body class="body-main">
-    <style>
-       
-        .test {
-            margin: unset;
-            padding: unset;
-            color: white;
-            position: absolute;
-            background: black;
-        }
-        
-        .container-a {
-            width: max(41.97em , 230px);
-            height: max(47.1em, 253px);
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .container-a {
-            /* position: absolute; */
-            margin-top: 2em;
-            margin-left: -6em;
-        }
-    </style>
     <script type="importmap">
         {
           "imports": {
@@ -53,7 +40,31 @@
    
     <script src="three-css2drenderer.js" type="module"></script>
     <script src="test.js" type="module"></script>
-    
+    <header>
+        <div class="header d-flex items-center between margin-auto">
+            <a href="./index.html"><img class="logo-header" src="./assets/img/logo.svg" alt="CheapPiar"></a>
+            <div class="d-flex items-center">
+                <a class="header-lc" href="./authorization.html"><img src="./assets/img/lc.svg" alt="Войти"></a>
+                <div class="between burger">
+                    <div class="border-55px"></div>
+                    <div class="border-55px"></div>
+                    <div class="transition_0_3 border-55px"></div>
+                </div>
+            </div>
+            
+            <div class="elements-header d-flex items-center transition_0_3">
+                <nav>
+                    <a href="#">API</a>
+                    <a href="#">Услуги</a>
+                    <a class="enter-main" href="./authorization.html">Войти</a>
+                </nav>
+                <a class="language-header d-flex items-center cursor-pointer" href="./index_en.html">
+                    <img src="./assets/img/ru.svg" alt="Русский язык">
+                    RU
+                </a>
+            </div>
+        </div>
+    </header>
     <main>
         <div class="container margin-auto">
             <section class="info-site">
@@ -73,19 +84,9 @@
                     </div>
                     <div class="pos-relative for-mas">
                         <div class="mascot" style="margin-top: 2em">
-                            <!-- <img class="mas" style="margin-right:unset; margin-left: -3em;" src="./assets/img/mas.png" alt="Максотик">
-                             -->
                             <div class="mas" id="container">
-
                             </div>
-                            
-<!--                                 <img class="form-eye pos-absolute" src="./assets/img/feye.png" alt="Форма для глаз">
-                                <img class="mas-eye pos-absolute" src="./assets/img/meye.svg" alt="">
-                                <h1 class="test" id="test">ЛОХ</h1>
-                                <h1 class="test" id="test2">ЛОХ</h1>
- -->                            
                         </div>
-                        
                     </div>
                 </div>
                 <div class="line margin-auto border-55px"></div>
@@ -166,5 +167,19 @@
             <img class="pos-absolute mas-2" src="./assets/img/mas_2.png" alt="Наш котик - маскотик">
         </div>
     </main>
+    <footer>
+        <div class="footer d-flex items-center margin-auto between">
+            <a href="./index.html"><img class="logo-footer" src="./assets/img/logo.svg" alt="CheapPiar"></a>
+            <nav>
+                <a href="./authorization.html">Войти</a>
+                <a href="./registration.html">Регистрация</a>
+                <a class="footer-lc" href="./authorization.html"><img src="./assets/img/lc.svg" alt="Войти"></a>
+            </nav>
+            <a class="language-footer d-flex items-center cursor-pointer" href="./index_en.html">
+                <img src="./assets/img/ru.svg" alt="Русский язык">
+                RU
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

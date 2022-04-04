@@ -1,5 +1,7 @@
+
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +25,21 @@
     <script src="assets/js/main.js"></script>
 </head>
 <body class="body-main">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "./three.js",
+            "three-css2drenderer": "./three-css2drenderer.js",
+            "three-css3drenderer": "./three-css3drenderer.js",
+            "orbit-controls": "./three-OrbitControls.js"
+          }
+        }
+      </script>
+    <script src="three.js" type="module"></script>
+    <script src="three-OrbitControls.js" type="module"></script>
+   
+    <script src="three-css2drenderer.js" type="module"></script>
+    <script src="test.js" type="module"></script>
     <header>
         <div class="header d-flex items-center between margin-auto">
             <a href="./index.html"><img class="logo-header" src="./assets/img/logo.svg" alt="CheapPiar"></a>
@@ -66,30 +83,9 @@
                         </div>
                     </div>
                     <div class="pos-relative for-mas">
-                        <div class="mascot pos-relative">
-                            <img class="mas pos-relative" src="./assets/img/mas.png" alt="Максотик">
-                            <img class="form-eye pos-absolute" src="./assets/img/feye.png" alt="Форма для глаз">
-                            <img class="mas-eye pos-absolute" src="./assets/img/meye.svg" alt="">
-                        </div>
-                        <div class="numbers people pos-absolute d-flex items-center border-55px">
-                            <p>+2605</p>
-                            <img src="./assets/img/people.svg" alt="Людей">
-                        </div>
-                        <div class="numbers heart pos-absolute d-flex items-center border-55px">
-                            <p>+9852</p>
-                            <img src="./assets/img/heart.svg" alt="Лайкнули">
-                        </div>
-                        <div class="numbers eye pos-absolute d-flex items-center border-55px">
-                            <p>+1520</p>
-                            <img src="./assets/img/eye.svg" alt="Увидели">
-                        </div>
-                        <div class="numbers big-eye pos-absolute d-flex items-center border-55px">
-                            <p>+9583</p>
-                            <img src="./assets/img/eye.svg" alt="Увидели">
-                        </div>
-                        <div class="numbers chat pos-absolute d-flex items-center border-55px">
-                            <p>+1009</p>
-                            <img src="./assets/img/chat.svg" alt="Написали">
+                        <div class="mascot" style="margin-top: 2em">
+                            <div class="mas" id="container">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -171,7 +167,6 @@
             <img class="pos-absolute mas-2" src="./assets/img/mas_2.png" alt="Наш котик - маскотик">
         </div>
     </main>
-    
     <footer>
         <div class="footer d-flex items-center margin-auto between">
             <a href="./index.html"><img class="logo-footer" src="./assets/img/logo.svg" alt="CheapPiar"></a>
